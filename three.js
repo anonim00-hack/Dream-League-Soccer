@@ -23,9 +23,11 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 7.5);
 scene.add(directionalLight);
 
+const loader = new THREE.GLTFLoader();
+
 loader.load('/ball/scene.gltf', (gltf) => {
     const steve = gltf.scene;
-    steve.scale.set(2, 2, 2);
+    steve.scale.set(12, 2, 2);
     steve.position.y = 3;
     scene.add(steve);
 });
@@ -49,3 +51,10 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// Обработка изменения размеров окна
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
