@@ -4,18 +4,13 @@
     box-sizing: border-box;
 }
 
-html{
-    animation: opacity 1s forwards;
+html {
 }
 
 body {
-    background: url('https://i.ytimg.com/vi/8JBAZYInQpA/maxresdefault.jpg');
+    background: url('https://kartinki.pics/pics/uploads/posts/2022-08/1660475704_1-kartinkin-net-p-ronaldu-oboi-krasivo-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.background1{
-    background: url('https://i.ytimg.com/vi/deBKU3VKYzo/maxresdefault.jpg');
     background-attachment: fixed;
 }
 
@@ -24,6 +19,10 @@ body {
     padding: 0 20px;
     width: 100%;
     max-width: 1140px;
+}
+
+.welcome_container .welcome{
+    margin-bottom: 200px;
 }
 
 .welcome {
@@ -36,7 +35,6 @@ body {
     align-items: end;
     animation: translate 0.4s forwards;
     z-index: 2;
-    margin-bottom: 200px;
 }
 
 .welcome::after {
@@ -199,7 +197,7 @@ body {
     }
 }
 
-.body_container{
+.html_container {
     padding: 40px 20px;
     display: none;
     flex-direction: column;
@@ -209,62 +207,123 @@ body {
     opacity: 0;
 }
 
-.opacity2{
+.opacity2 {
     animation: opacity 1s forwards;
 }
 
 @keyframes opacity {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-@keyframes opacity2 {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+/* header */
 
-
-.FAQ{
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: white;
-    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+@keyframes pos {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.icon{
+    width: 50px;
+}
+
+.twitch {
+    display: flex;
+}
+
+.btn_header {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Для того, чтобы псевдоэлемент не выходил за пределы кнопки */
+    background-color: #333; /* Цвет фона кнопки для лучшего визуального эффекта */
+    color: #fff; /* Цвет текста на кнопке */
+    margin-left: 10px;
+}
+
+.btn_header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: white; /* Цвет фона псевдоэлемента для демонстрации эффекта */
+    transition: width 0.3s; /* Плавный переход ширины */
+    mix-blend-mode: difference; /* Используем mix-blend-mode, чтобы псевдоэлемент изменял цвет фона кнопки */
+}
+
+.btn_header:hover::before {
+    width: 100%;
+}
+
+.search_inp {
+    left: 5%;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    width: 400px;
+}
+
+/* body */
+
+.body {
+    background: white;
+    border-radius: 5px;
+    margin-top: 250px;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.players{
+.players {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
 }
 
-.FAQ_contents{
+.contents {
     font-family: sans-serif;
 }
 
-.FAQ_text{
+.text {
     margin-bottom: 20px;
 }
 
-.FAQ_description{
-    font-size: 18px;
+.content_descripton {
     color: gray;
+    font-size: 18px;
 }
 
-.descriptions{
-    margin: 20px 0;
+.descriptions {
+    margin: 25px 0;
 }
+
 .description{
-    margin-bottom: 10px;
-}
-.description:last-child{
     margin-bottom: 10px;
 }
