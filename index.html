@@ -16,6 +16,22 @@
         <button class="enter">
             Enter to site
         </button>
+        <div class="backgrounds">
+            <button class="back">
+                <img class="back_image btn1"
+                    src="https://media.licdn.com/dms/image/D4D12AQHTpd7toYLLgw/article-cover_image-shrink_720_1280/0/1682617672812?e=2147483647&v=beta&t=7iBJauAKKVCCxPBmsNICp9Un683n-qCau5ac-5SL91M"
+                    alt="dls">
+            </button>
+            <button class="back">
+                <img class="back_image btn2" src="https://s0.rbk.ru/v6_top_pics/media/img/0/99/347053527482990.jpeg"
+                    alt="dls">
+            </button>
+            <button class="back">
+                <img class="back_image btn3"
+                    src="https://kartinki.pics/pics/uploads/posts/2022-08/1660475704_1-kartinkin-net-p-ronaldu-oboi-krasivo-1.jpg"
+                    alt="dls">
+            </button>
+        </div>
     </div>
     <div class="loading">
         <section class="dots-container">
@@ -39,8 +55,7 @@
             </div>
         </div>
         <div class="body">
-            <img class="players" src="https://cdn-www.bluestacks.com/bs-images/featured_com.firsttouchgames.dls7.jpg"
-                alt="player">
+            <canvas class="threejs" width="800" height="430"></canvas>
             <div class="contents">
                 <h2 class="text">What is this game ?</h2>
                 <span class="content_descripton">
@@ -99,6 +114,12 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+        integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="module" src="three.js"></script>
 </body>
 
 </html>

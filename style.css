@@ -134,6 +134,34 @@ body {
     transform: scale(2, 2);
 }
 
+.backgrounds {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+}
+.back {
+    cursor: pointer;
+    border: none;
+    background: rgb(221, 221, 221);
+}
+
+.back:nth-child(even){
+    background: rgb(202, 202, 202);
+}
+
+.back_image {
+    width: 130px;
+}
+
 .loading {
     display: none;
     width: 100%;
@@ -301,9 +329,7 @@ body {
     flex-direction: column;
 }
 
-.players {
-    width: 100%;
-    height: auto;
+.threejs{
     margin-bottom: 30px;
 }
 

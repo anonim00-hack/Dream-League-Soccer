@@ -33,6 +33,7 @@ enterBtn.addEventListener('click', () => {
     loading.style.display = 'block';
     htmlContainer.style.display = 'flex';
     checkIfImagesLoaded(); // Проверить, загружены ли уже изображения
+    BODY.style.backgroundSize = 'cover';
 });
 
 function checkIfImagesLoaded() {
@@ -61,3 +62,7 @@ function checkIfImagesLoaded() {
         htmlContainer.classList.add('opacity2');
     }
 }
+
+const btn1 = document.querySelector('.btn1').addEventListener('click',()=>{BODY.style.background = `url('https://media.licdn.com/dms/image/D4D12AQHTpd7toYLLgw/article-cover_image-shrink_720_1280/0/1682617672812?e=2147483647&v=beta&t=7iBJauAKKVCCxPBmsNICp9Un683n-qCau5ac-5SL91M')`;BODY.style.backgroundSize = 'cover';})
+const btn2 = document.querySelector('.btn2').addEventListener('click',()=>{BODY.style.background = `url('https://s0.rbk.ru/v6_top_pics/media/img/0/99/347053527482990.jpeg')`;BODY.style.backgroundSize = 'cover';})
+const btn3 = document.querySelector('.btn3').addEventListener('click',()=>{BODY.style.background = `url('https://kartinki.pics/pics/uploads/posts/2022-08/1660475704_1-kartinkin-net-p-ronaldu-oboi-krasivo-1.jpg`;BODY.style.backgroundSize = 'cover';})
